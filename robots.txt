@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tvpriyangan-ai.github.io/sitemap.xml
