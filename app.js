@@ -74,7 +74,7 @@
   });
   /* gallery */
   var g=$('gallery');
-  if(g)ACHIEVEMENTS.forEach(function(a,i){
+  if(g)ACHIEVEMENTS.filter(function(a){return !(g.classList.contains('mini')&&/poster/i.test(a.title))}).forEach(function(a,i){
     var b=document.createElement('button');b.type='button';b.className='gi rv zoom tilt';b.style.setProperty('--d',(i%4*.08)+'s');
     function asText(){b.className='gi txt rv zoom tilt in';b.innerHTML='<b></b><span></span>';b.querySelector('b').textContent=a.year;b.querySelector('span').textContent=a.title}
     if(a.image){
@@ -85,6 +85,8 @@
     }else asText();
     g.appendChild(b);
   });
+  /* home page: posters inside the software cards */
+  document.querySelectorAll('[data-full]').forEach(function(b){b.addEventListener('click',function(){openBox(b.dataset.full,b.dataset.title)})});
   /* home page: sidebar achievements */
   var sa=$('side-ach');
   if(sa)ACHIEVEMENTS.filter(function(a){return !/poster/i.test(a.title)}).forEach(function(a){

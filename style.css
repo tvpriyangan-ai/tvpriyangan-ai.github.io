@@ -171,3 +171,9 @@ main>.panel.in::after{content:"";position:absolute;left:0;right:0;top:-100px;hei
 .gal.mini .gi{margin-bottom:12px}
 .gal.mini .gi .cap{font-size:.78rem;padding:24px 10px 8px}
 #software .explore{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.psts{display:flex;gap:10px;margin-top:14px}
+.pst{flex:1;max-width:150px;border:0;padding:0;border-radius:10px;overflow:hidden;background:#fff;cursor:zoom-in;transition:transform .3s}
+.pst:hover{transform:translateY(-4px)}
+.pst img{display:block;width:100%;height:auto}
+.ex .go{display:inline-block;margin-top:14px;color:var(--gold);font-weight:600;text-decoration:none}
+.ex .go:hover{text-decoration:underline}
