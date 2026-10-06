@@ -34,7 +34,6 @@ const ACHIEVEMENTS = [
   {year:"2025", title:"Hikvision Co-Brand Recognition through DC Electricals", image:""},
   {year:"2023", title:"Completed an Advanced Diploma in Information Technology, AICT Campus", image:""},
   {year:"2019", title:"Ranked 9th in the district in the GCE Advanced Level examination (Physical Science) and selected to study Physiotherapy at the University of Peradeniya, Sri Lanka", image:""},
-  {year:"2019", title:"4th place, Provincial Debate Competition", image:""},
   {year:"2015–2019", title:"1st place, District Tamil Speech and Tamil Poetry Competitions (every year)", image:""},
   {year:"2017", title:"Junior Inventor Award", image:""},
   {year:"2016", title:"4th place, Provincial General Knowledge Quiz", image:""}
