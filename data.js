@@ -32,7 +32,7 @@ const ACHIEVEMENTS = [
   {year:"2026", title:"MR DOC project poster", image:"images/mrdocPoster.png"},
   {year:"2026", title:"DC Stock Manager project poster", image:"images/dcPoster.png"},
   {year:"2025", title:"Hikvision Co-Brand Recognition through DC Electricals", image:""},
-  {year:"2023", title:"Completed an Advanced Diploma in Information Technology", image:""},
+  {year:"2023", title:"Completed an Advanced Diploma in Information Technology, AICT Campus", image:""},
   {year:"2020", title:"Selected for BSc (Hons) Physiotherapy, Faculty of Allied Health Sciences, University of Peradeniya, Sri Lanka", image:""},
   {year:"2019", title:"9th rank at district level, GCE Advanced Level (Biology)", image:""},
   {year:"2019", title:"4th place, Provincial Debate Competition", image:""},
