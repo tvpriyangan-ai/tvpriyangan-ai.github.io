@@ -26,7 +26,7 @@ const CERTIFICATES = [
 /* Achievements + gallery. image is optional; without it the item shows as a text card. */
 const ACHIEVEMENTS = [
   {year:"2026", title:"INNOVATE-X at the University Innovation Exhibition", image:"images/exhibition1.jpeg"},
-  {year:"2026", title:"BCU Racing open day, Birmingham City University", image:"images/exhibition2.jpeg"},
+  {year:"2026", title:"BCU Racing open day, Birmingham City University", image:"images/exhibition2.jpeg", side:false},
   {year:"2026", title:"Smart Adaptive Temperature Control System poster", image:"images/exhi.jpeg"},
   {year:"2026", title:"Vinayagamoorthy Jothidam project poster", image:"images/vjPoster.jpeg"},
   {year:"2026", title:"MR DOC project poster", image:"images/mrdocPoster.png"},

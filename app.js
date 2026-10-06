@@ -89,7 +89,7 @@
   document.querySelectorAll('[data-full]').forEach(function(b){b.addEventListener('click',function(){openBox(b.dataset.full,b.dataset.title)})});
   /* home page: sidebar achievements */
   var sa=$('side-ach');
-  if(sa)ACHIEVEMENTS.filter(function(a){return !/poster/i.test(a.title)}).forEach(function(a){
+  if(sa)ACHIEVEMENTS.filter(function(a){return a.side!==false&&!/poster/i.test(a.title)}).forEach(function(a){
     var li=document.createElement('li');li.innerHTML='<b></b><span></span>';
     li.querySelector('b').textContent=a.year;li.querySelector('span').textContent=a.title;sa.appendChild(li);
   });
