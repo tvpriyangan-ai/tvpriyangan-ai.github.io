@@ -110,13 +110,6 @@
     (function step(t){t0=t0||t;var p=Math.min((t-t0)/1400,1),e=1-Math.pow(1-p,3);
       el.textContent=Math.round(to*e)+suf;if(p<1)requestAnimationFrame(step)})(performance.now());
   }
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){
-    if(!e.isIntersecting)return;
-    e.target.classList.add('in');io.unobserve(e.target);
-    e.target.querySelectorAll('[data-count]').forEach(count);
-    e.target.querySelectorAll('.tl').forEach(function(x){x.classList.add('in')});
-  })},{threshold:0,rootMargin:'0px 0px -8% 0px'});
-  document.querySelectorAll('.rv,.tl').forEach(function(el){if(!el.classList.contains('in'))io.observe(el)});
   /* robotics-style heading decode */
   var glyphs='01<>/#$%&';
   function decode(el){
@@ -127,13 +120,24 @@
       if(p<1)requestAnimationFrame(f);else el.textContent=t;
     })(s);
   }
-  if(!reduce){
-    var dio=new IntersectionObserver(function(es){es.forEach(function(e){
-      if(!e.isIntersecting)return;dio.unobserve(e.target);
-      var h=e.target.querySelector('h2');if(h)setTimeout(function(){decode(h)},450);
-    })},{threshold:.2});
-    document.querySelectorAll('main>.panel').forEach(function(p){dio.observe(p)});
+  /* reveal on scroll. Uses layout position (offsetTop), which the 3D flip
+     transform does not change, so tall panels still reveal on page load. */
+  function docTop(el){var y=0;while(el){y+=el.offsetTop;el=el.offsetParent}return y}
+  var pending=[].slice.call(document.querySelectorAll('.rv,.tl')).filter(function(el){return !el.classList.contains('in')});
+  function reveal(){
+    var line=scrollY+innerHeight*.92;
+    pending=pending.filter(function(el){
+      if(docTop(el)>line)return true;
+      el.classList.add('in');
+      el.querySelectorAll('[data-count]').forEach(count);
+      el.querySelectorAll('.tl').forEach(function(x){x.classList.add('in')});
+      if(!reduce&&el.matches('main>.panel')){var h=el.querySelector('h2');if(h)setTimeout(function(){decode(h)},450)}
+      return false;
+    });
+    if(!pending.length)removeEventListener('scroll',reveal);
   }
+  addEventListener('scroll',reveal,{passive:true});addEventListener('resize',reveal);
+  requestAnimationFrame(function(){requestAnimationFrame(reveal)});
   /* progress bar + scrollspy */
   var bar=$('bar'),links=[].slice.call(document.querySelectorAll('.toc a'));
   var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
