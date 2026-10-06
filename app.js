@@ -85,6 +85,20 @@
     }else asText();
     g.appendChild(b);
   });
+  /* home page: posters and sidebar achievements */
+  var ps=$('posters');
+  if(ps)ACHIEVEMENTS.filter(function(a){return /poster/i.test(a.title)&&a.image}).forEach(function(a,i){
+    var b=document.createElement('button');b.type='button';b.className='gi rv zoom tilt';b.style.setProperty('--d',(i*.08)+'s');
+    b.appendChild(img(a.image,a.title,b));
+    var cap=document.createElement('div');cap.className='cap';cap.innerHTML='<span></span>';
+    cap.querySelector('span').textContent=a.title.replace(/ project poster$/,'');b.appendChild(cap);
+    b.addEventListener('click',function(){openBox(a.image,a.title)});ps.appendChild(b);
+  });
+  var sa=$('side-ach');
+  if(sa)ACHIEVEMENTS.filter(function(a){return !/poster/i.test(a.title)}).forEach(function(a){
+    var li=document.createElement('li');li.innerHTML='<b></b><span></span>';
+    li.querySelector('b').textContent=a.year;li.querySelector('span').textContent=a.title;sa.appendChild(li);
+  });
   /* home page counts */
   var n={projects:typeof PROJECTS!=='undefined'&&PROJECTS.length+' projects',certs:CERTIFICATES.length+' certificates',gallery:ACHIEVEMENTS.length+' moments'};
   document.querySelectorAll('[data-n]').forEach(function(e){e.textContent=n[e.dataset.n]});
@@ -107,7 +121,7 @@
     e.target.classList.add('in');io.unobserve(e.target);
     e.target.querySelectorAll('[data-count]').forEach(count);
     e.target.querySelectorAll('.tl').forEach(function(x){x.classList.add('in')});
-  })},{threshold:.1});
+  })},{threshold:0,rootMargin:'0px 0px -8% 0px'});
   document.querySelectorAll('.rv,.tl').forEach(function(el){if(!el.classList.contains('in'))io.observe(el)});
   /* robotics-style heading decode */
   var glyphs='01<>/#$%&';

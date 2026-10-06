@@ -141,3 +141,16 @@ main>.panel.in::after{content:"";position:absolute;left:0;right:0;top:-100px;hei
 .js .rv.in.tilt{transition:transform .25s ease-out,box-shadow .3s;transition-delay:0s}
 .cert .shot{padding:0;background:#fff}
 .cert .b{min-height:74px}
+
+/* home: software explore, posters, sidebar achievements */
+.ex .chips{margin-top:12px}
+.ex span{display:block}
+.posters{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}
+.posters .gi{margin:0}
+.posters .gi .cap{transform:none;opacity:1}
+.toc{max-height:calc(100vh - 56px);overflow-y:auto;scrollbar-width:thin}
+.toc .ach-h{margin-top:26px}
+.ach{list-style:none;padding:0;display:grid;gap:12px;font-size:.84rem}
+.ach li{border-left:2px solid var(--line);padding-left:10px}
+.ach b{display:block;color:var(--gold);font-size:.78rem;letter-spacing:.06em}
+.ach span{color:var(--muted)}

@@ -37,18 +37,23 @@
 <main>
 <section id="about" class="panel about rv">
     <h2>About</h2>
-    <p>For six years I ran <strong>DC Electricals</strong> in Sri Lanka, delivering over 1,200 electrical installations, and worked as a CCTV and electronics technician. Now I'm studying <strong>BSc Computer Science with AI Engineering</strong> in Birmingham.</p>
-    <p>That hardware background plus software skills means I build whole systems: interface, API, database and deployment. My latest app, an astrology platform with an AI agent, is <strong>live on the Google Play Store</strong>.</p>
-    <ul class="chips"><li>Full-stack apps</li><li>AI agents</li><li>REST APIs</li><li>Arduino and IoT</li><li>Cloud deployment</li></ul>
+    <p>I'm a <strong>full-stack developer</strong> studying <strong>BSc Computer Science with AI Engineering</strong> at the University of Birmingham. I build complete software products end to end: React interfaces, REST APIs in FastAPI and Node.js, MongoDB and MySQL databases, authentication and cloud deployment.</p>
+    <p>My latest app, an astrology platform with a built-in <strong>AI agent</strong> that answers questions in natural language, is <strong>live on the Google Play Store</strong>. I've also built business systems for invoicing, stock control and records management, and I'm now focused on AI, machine learning and software engineering.</p>
+    <p class="muted">Before university I ran DC Electricals, my own electrical and CCTV business in Sri Lanka.</p>
+    <ul class="chips"><li>Full-stack apps</li><li>AI agents</li><li>REST APIs</li><li>Databases</li><li>Cloud deployment</li></ul>
   </section>
-  <section id="impact" class="panel rv">
-    <h2>Impact at a glance</h2>
-    <div class="stats">
-      <div class="stat"><b data-count="1200" data-suffix="+">0</b><span>installations delivered</span></div>
-      <div class="stat"><b data-count="150" data-suffix="+">0</b><span>products in my stock system</span></div>
-      <div class="stat"><b data-count="6" data-suffix="">0</b><span>projects built</span></div>
-      <div class="stat"><b data-count="14" data-from="certs" data-suffix="">0</b><span>certificates earned</span></div>
+  <section id="software" class="panel rv">
+    <h2>Explore my software</h2>
+    <div class="explore">
+      <a class="ex tilt" href="projects.html"><b>Live on Google Play</b><span>Vinayagamoorthy Jothidam: astrology platform with an AI agent, shipped as a PWA and Android TWA.</span><ul class="chips"><li>React</li><li>FastAPI</li><li>MongoDB</li></ul><i>→</i></a>
+      <a class="ex tilt" href="projects.html"><b>Business systems</b><span>MR DOC and DC Stock Manager: invoices, dashboards, stock control and role-based users.</span><ul class="chips"><li>Node.js</li><li>Express</li><li>MySQL</li></ul><i>→</i></a>
+      <a class="ex tilt" href="projects.html"><b>AI and agents</b><span>Natural-language AI agent, plus my AI Engineering degree in machine learning and intelligent systems.</span><ul class="chips"><li>Python</li><li>AI agents</li><li>ML</li></ul><i>→</i></a>
+      <a class="ex tilt" href="projects.html"><b>Python apps</b><span>Hospital and employee management systems with object-oriented design and SQL databases.</span><ul class="chips"><li>Python</li><li>OOP</li><li>MySQL</li></ul><i>→</i></a>
     </div>
+  </section>
+  <section id="poster-section" class="panel rv">
+    <h2>Project posters</h2>
+    <div class="posters" id="posters"></div>
   </section>
   <section id="skills" class="panel rv">
     <h2>Skills</h2>
@@ -72,7 +77,7 @@
     </div>
   </section>
   <section id="explore" class="panel rv">
-    <h2>Explore</h2>
+    <h2>More pages</h2>
     <div class="explore">
       <a class="ex tilt" href="projects.html"><b>Projects</b><span data-n="projects"></span><i>→</i></a>
       <a class="ex tilt" href="certificates.html"><b>Certificates</b><span data-n="certs"></span><i>→</i></a>
@@ -94,12 +99,15 @@
   <h2>Sections</h2>
   <ol>
     <li><a href="#about">About <span>01</span></a></li>
-    <li><a href="#impact">Impact <span>02</span></a></li>
-    <li><a href="#skills">Skills <span>03</span></a></li>
-    <li><a href="#experience">Experience <span>04</span></a></li>
-    <li><a href="#explore">Explore <span>05</span></a></li>
-    <li><a href="#contact">Contact <span>06</span></a></li>
+    <li><a href="#software">Software <span>02</span></a></li>
+    <li><a href="#poster-section">Posters <span>03</span></a></li>
+    <li><a href="#skills">Skills <span>04</span></a></li>
+    <li><a href="#experience">Experience <span>05</span></a></li>
+    <li><a href="#explore">Pages <span>06</span></a></li>
+    <li><a href="#contact">Contact <span>07</span></a></li>
   </ol>
+  <h2 class="ach-h">Achievements</h2>
+  <ol class="ach" id="side-ach"></ol>
 </nav>
 </div>
 <script src="data.js"></script>
