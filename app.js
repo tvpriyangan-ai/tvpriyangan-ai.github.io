@@ -74,7 +74,7 @@
   });
   /* gallery */
   var g=$('gallery');
-  if(g)ACHIEVEMENTS.filter(function(a){return !(g.classList.contains('mini')&&/poster/i.test(a.title))}).forEach(function(a,i){
+  if(g)ACHIEVEMENTS.filter(function(a){return a.image&&!(g.classList.contains('mini')&&/poster/i.test(a.title))}).forEach(function(a,i){
     var b=document.createElement('button');b.type='button';b.className='gi rv zoom tilt';b.style.setProperty('--d',(i%4*.08)+'s');
     function asText(){b.className='gi txt rv zoom tilt in';b.innerHTML='<b></b><span></span>';b.querySelector('b').textContent=a.year;b.querySelector('span').textContent=a.title}
     if(a.image){
@@ -94,7 +94,7 @@
     li.querySelector('b').textContent=a.year;li.querySelector('span').textContent=a.title;sa.appendChild(li);
   });
   /* home page counts */
-  var n={projects:typeof PROJECTS!=='undefined'&&PROJECTS.length+' projects',certs:CERTIFICATES.length+' certificates',gallery:ACHIEVEMENTS.length+' moments'};
+  var n={projects:typeof PROJECTS!=='undefined'&&PROJECTS.length+' projects',certs:CERTIFICATES.length+' certificates',gallery:ACHIEVEMENTS.filter(function(a){return a.image}).length+' photos'};
   document.querySelectorAll('[data-n]').forEach(function(e){e.textContent=n[e.dataset.n]});
   document.querySelectorAll('[data-from="certs"]').forEach(function(e){e.dataset.count=CERTIFICATES.length});
   /* theme */
