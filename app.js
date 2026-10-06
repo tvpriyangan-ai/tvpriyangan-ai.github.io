@@ -85,6 +85,16 @@
     }else asText();
     g.appendChild(b);
   });
+  /* home page: early innovations grid */
+  var iv=$('inventions');
+  if(iv&&typeof INVENTIONS!=='undefined')INVENTIONS.forEach(function(x,i){
+    var b=document.createElement('button');b.type='button';b.className='it rv zoom';b.style.setProperty('--d',(i*.07)+'s');
+    b.setAttribute('aria-label','Enlarge '+x.title);
+    b.appendChild(img(x.image,x.title,b));
+    var cap=document.createElement('span');cap.className='cap';cap.textContent=x.title;b.appendChild(cap);
+    b.addEventListener('click',function(){openBox(x.image,x.title)});
+    iv.appendChild(b);
+  });
   /* home page: posters inside the software cards */
   document.querySelectorAll('[data-full]').forEach(function(b){b.addEventListener('click',function(){openBox(b.dataset.full,b.dataset.title)})});
   /* home page: sidebar achievements */
