@@ -22,6 +22,9 @@ const ACHIEVEMENTS = [
   {year:"2026", title:"INNOVATE-X team at the University Innovation Exhibition", image:"images/group.jpeg", side:false},
   {year:"2026", title:"INNOVATE X5 prototype: Smart Adaptive Temperature Control System", image:"images/mac.jpeg", side:false},
   {year:"2026", title:"INNOVATE-X futuristic model concept", image:"images/futurestic.jpeg", side:false},
+  {year:"2026", title:"Innovation Fest 2026 pass, Birmingham City University", image:"images/fest.jpeg", side:false},
+  {year:"2026", title:"Innovation Fest 2026 group photo at BCU", image:"images/festgroup.jpeg", side:false},
+  {year:"2026", title:"Birmingham City University post celebrating Innovation Fest 2026", image:"images/festpost.jpeg", side:false},
   {year:"2026", title:"BCU Racing open day, Birmingham City University", image:"images/exhibition2.jpeg", side:false},
   {year:"2026", title:"Smart Adaptive Temperature Control System poster", image:"images/exhi.jpeg"},
   {year:"2026", title:"Vinayagamoorthy Jothidam Software poster", image:"images/vjPoster.jpeg"},
@@ -40,12 +43,12 @@ const PROJECTS = [
   {title:"Vinayagamoorthy Jothidam ( Astrology Software)", desc:"Astrology platform with Jathagam calculation, 22 Porutham matching, Dasa/Bhukti, Panchangam and an AI agent that answers questions in natural language. Published on Google Play as a PWA and Android TWA.", tags:["React","FastAPI","MongoDB","JWT","Android TWA"], images:["images/vjlog.jpeg","images/vjm.jpeg","images/vj3.jpeg","images/vj2.jpeg","images/VJC.jpeg","images/vjPoster.jpeg"], play:"", live:"", code:"https://github.com/tvpriyangan-ai"},
   {title:"MR DOC ( Management Software)", desc:"Business management system with invoices, customers, transaction history and dashboards for income, expenses and net profit.", tags:["Node.js","Express","MongoDB Atlas"], images:["images/mrdoc1.jpeg","images/mrdoc2.jpeg","images/mrdocPoster.png"], live:"", code:"https://github.com/tvpriyangan-ai"},
   {title:"DC Stock Manager ( Inventory Software)", desc:"Inventory system for CCTV businesses: 150+ products, stock in and out, low-stock alerts, PDF invoices and role-based users.", tags:["Node.js","Express","MySQL"], images:["images/dcm.jpeg","images/dch.jpeg","images/dcsp.jpeg","images/dcPoster.png"], live:"", code:"https://github.com/tvpriyangan-ai"},
-  {title:"INNOVATE-X Project", desc:"Arduino prototype that heats, cools and runs a fan automatically from live temperature readings. Shown at the university Innovation Exhibition.", tags:["Arduino","IoT","Sensors"], images:["images/exhibition1.jpeg","images/exhi.jpeg","images/futurestic.jpeg","images/mac.jpeg"]},
+  {title:"INNOVATE-X Project", desc:"Arduino prototype that heats, cools and runs a fan automatically from live temperature readings. Shown at the university Innovation Exhibition.", tags:["Arduino","IoT","Sensors"], images:["images/exhibition1.jpeg","images/exhi.jpeg","images/futurestic.jpeg","images/mac.jpeg","images/festgroup.jpeg","images/fest.jpeg","images/festpost.jpeg"], live:"", code:"https://github.com/tvpriyangan-ai"},
   {title:"Hospital Management System", desc:"Python desktop app managing doctors, patients and hospital records with a database behind it.", tags:["Python","GUI","Database"], images:["images/HMSPoster.png"], code:"https://github.com/tvpriyangan-ai"},
   {title:"Employee Management System", desc:"Create, update, search and delete employee records, built with object-oriented Python and MySQL.", tags:["Python","MySQL","OOP"], images:["images/EMSPoster.png"], code:"https://github.com/tvpriyangan-ai"}
 ];
 
-/* Early Innovations (home page grid). Click a tile to enlarge. */
+
 const INVENTIONS = [
   {title:"Bulb Fan", image:"images/bulbFan.jpeg"},
   {title:"Dual Light", image:"images/dualLight.jpeg"},
