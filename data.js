@@ -19,6 +19,9 @@ const CERTIFICATES = [
 
 const ACHIEVEMENTS = [
   {year:"2026", title:"INNOVATE-X at the University Innovation Exhibition", image:"images/exhibition1.jpeg"},
+  {year:"2026", title:"INNOVATE-X team at the University Innovation Exhibition", image:"images/group.jpeg", side:false},
+  {year:"2026", title:"INNOVATE X5 prototype: Smart Adaptive Temperature Control System", image:"images/mac.jpeg", side:false},
+  {year:"2026", title:"INNOVATE-X futuristic model concept", image:"images/futurestic.jpeg", side:false},
   {year:"2026", title:"BCU Racing open day, Birmingham City University", image:"images/exhibition2.jpeg", side:false},
   {year:"2026", title:"Smart Adaptive Temperature Control System poster", image:"images/exhi.jpeg"},
   {year:"2026", title:"Vinayagamoorthy Jothidam Software poster", image:"images/vjPoster.jpeg"},
