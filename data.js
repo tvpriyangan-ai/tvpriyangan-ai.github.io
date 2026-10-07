@@ -18,6 +18,7 @@ const CERTIFICATES = [
 
 
 const ACHIEVEMENTS = [
+  {year:"2026", title:"With my web development lecturers at Birmingham City University", image:"images/websir.jpeg", side:false},
   {year:"2026", title:"INNOVATE-X at the University Innovation Exhibition", image:"images/exhibition1.jpeg"},
   {year:"2026", title:"INNOVATE-X team at the University Innovation Exhibition", image:"images/group.jpeg", side:false},
   {year:"2026", title:"INNOVATE X5 prototype: Smart Adaptive Temperature Control System", image:"images/mac.jpeg", side:false},
