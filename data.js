@@ -1,5 +1,9 @@
 
 const CERTIFICATES = [
+  {title:"AWS Cloud Practitioner Essentials", issuer:"AWS Training & Certification", date:"Oct 2026", category:"Cloud", image:"images/aws.png", link:""},
+  {title:"Enterprise Design Thinking Practitioner", issuer:"IBM SkillsBuild", date:"", category:"Design", image:"certificates/IBM1.jpeg", link:""},
+  {title:"Web Development Fundamentals", issuer:"IBM SkillsBuild", date:"", category:"Web", image:"certificates/IBM2.jpeg", link:""},
+  {title:"Web Development", issuer:"The Coding X", date:"Apr 2026", category:"Web", image:"certificates/webDevelopment.jpeg", link:""},
   {title:"Artificial Intelligence", issuer:"The Programming Hub", date:"", category:"AI", image:"certificates/Ai.jpeg", link:""},
   {title:"C++", issuer:"The Programming Hub", date:"", category:"Programming", image:"certificates/C++.jpeg", link:""},
   {title:"C Advanced", issuer:"The Programming Hub", date:"", category:"Programming", image:"certificates/cAdvanced.jpeg", link:""},
@@ -7,11 +11,8 @@ const CERTIFICATES = [
   {title:"Python", issuer:"The Programming Hub", date:"", category:"Programming", image:"certificates/python.jpeg", link:""},
   {title:"Python 3", issuer:"The Programming Hub", date:"", category:"Programming", image:"certificates/python3.jpeg", link:""},
   {title:"Python Advanced", issuer:"The Programming Hub", date:"", category:"Programming", image:"certificates/pythonAdvanced.jpeg", link:""},
-  {title:"Python Programming", issuer:"The Coding X", date:"Jun 2026", category:"Programming", image:"certificates/pythonProgramming.jpeg", link:""},
   {title:"JavaScript", issuer:"The Programming Hub", date:"", category:"Web", image:"certificates/JS.jpeg", link:""},
-  {title:"Web Development", issuer:"The Coding X", date:"Apr 2026", category:"Web", image:"certificates/webDevelopment.jpeg", link:""},
-  {title:"Web Development Fundamentals", issuer:"IBM SkillsBuild", date:"", category:"Web", image:"certificates/IBM2.jpeg", link:""},
-  {title:"Enterprise Design Thinking Practitioner", issuer:"IBM SkillsBuild", date:"", category:"Design", image:"certificates/IBM1.jpeg", link:""},
+  {title:"Python Programming", issuer:"The Coding X", date:"Jun 2026", category:"Programming", image:"certificates/pythonProgramming.jpeg", link:""},
   {title:"Hikvision IP CCTV and Access Control Training", issuer:"Hikvision", date:"Jan 2025", category:"Electronics", image:"certificates/HIK.jpeg", link:""},
   {title:"Gem Identification and Valuation", issuer:"Gem Ethics Academy", date:"Sep 2025", category:"Other", image:"certificates/gem.jpeg", link:""}
 ];

@@ -19,18 +19,27 @@
     im.src=src;return im;
   }
   /* certificates grid with names */
+  function badge(issuer){
+    var w=issuer.replace(/^The\s+/i,'').split(/\s+/);
+    if(/^[A-Z]{2,}$/.test(w[0]))return w[0];
+    return w.length>1?w.map(function(x){return x.charAt(0)}).join('').slice(0,3).toUpperCase():w[0].slice(0,3).toUpperCase();
+  }
   function card(c,i){
     var b=document.createElement('button');b.type='button';b.className='cert rv tilt';b.style.setProperty('--d',(i%4*.08)+'s');
-    b.innerHTML='<div class="shot"></div><div class="b"><h3></h3><span></span></div>';
+    b.innerHTML='<div class="shot"><div class="mat"></div><span class="cat"></span></div><div class="b"><div class="iss"><i></i><span></span></div><h3></h3><div class="meta"><time></time><em>View certificate</em></div></div>';
     b.querySelector('h3').textContent=c.title;
-    b.querySelector('span').textContent=c.issuer+(c.date?', '+c.date:'');
-    var shot=b.querySelector('.shot');shot.textContent='';
-    if(c.image)shot.appendChild(img(c.image,c.title+' certificate',shot));else shot.textContent='Add image';
+    b.querySelector('.iss i').textContent=badge(c.issuer);
+    b.querySelector('.iss span').textContent=c.issuer;
+    b.querySelector('.cat').textContent=c.category;
+    b.querySelector('time').textContent=c.date||'Completed';
+    var mat=b.querySelector('.mat');
+    if(c.image)mat.appendChild(img(c.image,c.title+' certificate',mat));else mat.textContent='Add image';
     if(c.link){
       var a=document.createElement('a');a.className='lk';a.href=c.link;a.target='_blank';a.rel='noopener';a.textContent='Verify on LinkedIn';
       a.addEventListener('click',function(e){e.stopPropagation()});
-      b.querySelector('.b').appendChild(document.createElement('br'));b.querySelector('.b').appendChild(a);
+      b.querySelector('.b').appendChild(a);
     }
+    b.setAttribute('aria-label',c.title+', '+c.issuer+(c.date?', '+c.date:''));
     b.addEventListener('click',function(){if(c.image)openBox(c.image,c.title)});
     return b;
   }
