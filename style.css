@@ -1231,3 +1231,65 @@ img {
     flex-wrap: wrap;
   }
 }
+/* Skills: each category in its own card */
+.skills {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+}
+.skills > div {
+  position: relative;
+  background: var(--card2);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px 18px 20px;
+  overflow: hidden;
+  transition:
+    transform 0.3s,
+    border-color 0.3s,
+    box-shadow 0.3s;
+}
+.skills > div::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+.skills > div:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+  box-shadow: 0 12px 28px var(--soft);
+}
+.skills h3 {
+  color: var(--gold);
+  padding-bottom: 10px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+.skills .chips li {
+  background: var(--card);
+  border: 1px solid var(--line);
+  padding: 4px 12px;
+  transition:
+    border-color 0.25s,
+    color 0.25s;
+}
+.skills .chips li:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+@media (max-width: 480px) {
+  .skills {
+    grid-template-columns: 1fr;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .skills > div,
+  .skills > div:hover {
+    transition: none;
+    transform: none;
+  }
+}
+.skills > div:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
