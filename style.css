@@ -1487,3 +1487,122 @@ img {
     display: none;
   }
 }
+/* ---- Experience and education: two styled containers ---- */
+.xp {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+  gap: 18px;
+}
+.xp-box {
+  position: relative;
+  background: var(--card2);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 20px 20px 22px;
+  overflow: hidden;
+}
+.xp-box::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+.xp-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 14px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+}
+.xp-ic {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: var(--soft);
+  border: 1px solid var(--gold);
+}
+.xp-ic svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.xp-head h3 {
+  font-size: 1.25rem;
+  color: var(--gold);
+}
+.xp-n {
+  margin-left: auto;
+  font-size: 0.76rem;
+  color: var(--muted);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 2px 10px;
+  white-space: nowrap;
+}
+.xp .tl {
+  gap: 14px;
+  padding-left: 26px;
+}
+.xp .tl article {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 14px 16px;
+  transition:
+    border-color 0.3s,
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+.xp .tl article:hover {
+  border-color: var(--gold);
+  transform: translateX(4px);
+  box-shadow: 0 10px 24px var(--soft);
+}
+.xp .tl article::before {
+  left: -33px;
+  top: 20px;
+  width: 12px;
+  height: 12px;
+}
+.xp .tl time {
+  background: var(--card2);
+  border: 1px solid var(--line);
+}
+.xp .tl h3 {
+  font-size: 1.02rem;
+  margin: 4px 0 2px;
+}
+.xp .tl p {
+  font-size: 0.92rem;
+}
+@media (max-width: 480px) {
+  .xp-box {
+    padding: 16px 14px 18px;
+  }
+  .xp-head h3 {
+    font-size: 1.1rem;
+  }
+  .xp .tl {
+    padding-left: 22px;
+  }
+  .xp .tl article::before {
+    left: -29px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .xp .tl article,
+  .xp .tl article:hover {
+    transition: none;
+    transform: none;
+  }
+}
