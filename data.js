@@ -1,6 +1,6 @@
 
 const CERTIFICATES = [
-  {title:"Introduction to Large Language Models", issuer:"Google Cloud Skills Boost", date:"", category:"AI", image:"images/googleskill.jpeg", link:""},
+  {title:"Introduction to Large Language Models", issuer:"Google Cloud Skills Boost", date:"Oct 2026", category:"AI", image:"images/googleskill.jpeg", link:""},
   {title:"AWS Cloud Practitioner Essentials", issuer:"AWS Training & Certification", date:"Oct 2026", category:"Cloud", image:"images/aws.png", link:""},
   {title:"Enterprise Design Thinking Practitioner", issuer:"IBM SkillsBuild", date:"", category:"Design", image:"certificates/IBM1.jpeg", link:""},
   {title:"Web Development Fundamentals", issuer:"IBM SkillsBuild", date:"", category:"Web", image:"certificates/IBM2.jpeg", link:""},
