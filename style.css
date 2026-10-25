@@ -454,6 +454,17 @@ html:not(.js) .tl::before {
   color: var(--gold);
   margin-bottom: 4px;
 }
+.tl .xp-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--gold);
+  font-size: 0.9rem;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+.tl .xp-link:hover {
+  opacity: 0.8;
+}
 .tl p {
   color: var(--muted);
   max-width: 66ch;
@@ -1585,6 +1596,33 @@ img {
 .xp .tl p {
   font-size: 0.92rem;
 }
+.xp .tl article.has-logo {
+  display: flow-root;
+}
+.xp-logo {
+  float: right;
+  display: grid;
+  place-items: center;
+  width: 104px;
+  height: 72px;
+  margin: 0 0 8px 14px;
+  padding: 8px;
+  background: #fff;
+  border: 2px solid var(--gold);
+  border-radius: 12px;
+  outline: 1px solid var(--line);
+  outline-offset: 3px;
+  box-shadow: 0 8px 20px var(--soft);
+  transition: transform 0.3s;
+}
+.xp-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.xp .tl article:hover .xp-logo {
+  transform: scale(1.05);
+}
 @media (max-width: 480px) {
   .xp-box {
     padding: 16px 14px 18px;
@@ -1598,10 +1636,17 @@ img {
   .xp .tl article::before {
     left: -29px;
   }
+  .xp-logo {
+    width: 76px;
+    height: 54px;
+    padding: 6px;
+    margin-left: 10px;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   .xp .tl article,
-  .xp .tl article:hover {
+  .xp .tl article:hover,
+  .xp .tl article:hover .xp-logo {
     transition: none;
     transform: none;
   }
