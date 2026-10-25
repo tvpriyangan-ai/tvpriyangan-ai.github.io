@@ -1603,20 +1603,19 @@ img {
   float: right;
   display: grid;
   place-items: center;
-  width: 84px;
-  height: 52px;
+  width: 64px;
+  height: 64px;
   margin: 0 0 6px 12px;
-  padding: 4px;
   background: #fff;
-  border: 1px solid var(--gold);
-  border-radius: 8px;
+  border: 2px solid var(--gold);
+  border-radius: 12px;
   overflow: hidden;
 }
 .xp-logo img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 @media (max-width: 480px) {
   .xp-box {
@@ -1632,9 +1631,8 @@ img {
     left: -29px;
   }
   .xp-logo {
-    width: 66px;
-    height: 42px;
-    padding: 3px;
+    width: 50px;
+    height: 50px;
     margin-left: 8px;
   }
 }
