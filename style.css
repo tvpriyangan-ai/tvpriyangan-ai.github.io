@@ -1597,15 +1597,21 @@ img {
   font-size: 0.92rem;
 }
 .xp .tl article.has-logo {
-  display: flow-root;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.xp-txt {
+  flex: 1;
+  min-width: 0;
 }
 .xp-logo {
-  float: right;
+  order: 2;
+  flex: none;
   display: grid;
   place-items: center;
-  width: 64px;
-  height: 64px;
-  margin: 0 0 6px 12px;
+  width: 78px;
+  height: 78px;
   background: #fff;
   border: 2px solid var(--gold);
   border-radius: 12px;
@@ -1630,10 +1636,12 @@ img {
   .xp .tl article::before {
     left: -29px;
   }
+  .xp .tl article.has-logo {
+    gap: 10px;
+  }
   .xp-logo {
-    width: 50px;
-    height: 50px;
-    margin-left: 8px;
+    width: 58px;
+    height: 58px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
